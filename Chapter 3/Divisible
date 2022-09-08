@@ -1,0 +1,64 @@
+/**Class: Divisible
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will check if the number the user gives is divisible by 3 or 5
+ */
+
+import java.util.Scanner;
+
+public class Divisible
+{
+
+    public static void main (String [] args)
+    {
+
+        //adds a scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks the user to type a number
+        System.out.println("Enter a number: ");
+
+        //gets user input
+        int number1 = input.nextInt();
+
+
+        //checks if the number is divisible by both 3 and 5
+        if ((number1 % 3 == 0) && (number1 % 5 == 0))
+        {
+
+            //prints this if number divisible by both 3 and 5
+            System.out.println("Number is a multiple of 3 and a multiple of 5");
+
+        }
+
+        //checks if number is divisible by 3 or 5
+        if ((number1 % 3 == 0) || (number1 % 5 == 0))
+        {
+
+            //prints this if the condition is true
+            System.out.println("Number is a multiple of either 3 or 5");
+
+        }
+
+
+        //checks if the number is divisible by either a 3 or 5 and not the other
+        if ((number1 % 3 == 0 && number1 % 5 != 0) || (number1 % 3 != 0 && number1 % 5 == 0))
+        {
+
+            //prints this if condition is true
+            System.out.println("Number is divisible by either 3 or 5 but not both");
+
+
+
+        }
+
+
+
+
+    }
+    
+
+}
