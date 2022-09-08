@@ -1,0 +1,54 @@
+/**Class: RandomInteger
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will generate a random integer between 0 and 10, and ask the user to guess the generated number.
+ */
+
+
+public class RandomInteger
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates a variable that stores a number from 0 to 10
+        int random = (int)(Math.random() * 11);
+
+        //creates a scanner object
+        java.util.Scanner input = new java.util.Scanner(System.in);
+
+
+        //asks user to guess
+        System.out.println("Guess a number between 0 and 10: ");
+
+        //gets input from user
+        int guess = input.nextInt();
+
+        //if statement used to determine whether user guessed correctly
+        if (guess == random)
+        {
+            //if guess is equal to the random number then print this
+            System.out.println("Horray you guessed the number");
+
+        }
+        else
+        {
+
+            //Print this if user's guess is incorrect
+            System.out.println("You Lost!!");
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+}
