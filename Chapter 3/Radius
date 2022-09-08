@@ -1,0 +1,64 @@
+/**Class: Radius 
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will calculate the area of a circle 
+ */
+
+
+public class Radius
+{
+
+
+    public static void main (String [] args)
+    {
+
+        //create a scanner object
+        java.util.Scanner input = new java.util.Scanner(System.in);
+
+        //asks the user for the radius
+        System.out.println("Enter the radius of the circle: ");
+
+        //gets input from user
+        double radius = input.nextDouble();
+
+
+        //determines if the radius is positive or negative
+        if (radius < 0)
+        {
+
+            //prints this if radius is negative
+            System.out.println("Invalid Entry, the radius should be positive");
+
+            //ends program here if radius is negative
+            System.exit(0);
+
+        }
+        else
+        {
+
+            //calculates for the area of the circle
+            double areaOfCircle = Math.PI * radius * radius;
+
+            //prints the radius and area of the circle
+            System.out.println("The area of a circle with radius " + radius + " is " + areaOfCircle);
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+}
+
