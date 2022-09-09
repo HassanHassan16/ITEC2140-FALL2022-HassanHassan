@@ -1,0 +1,80 @@
+/**Class: Triangle 
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will compute the perimeter of the triangle 
+ */
+
+import java.util.Scanner;
+
+
+public class Triangle
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates a scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks the user for the length of a side
+        System.out.println("Enter length of the first edge: ");
+
+        //gets the input from the user
+        int length1 = input.nextInt();
+
+
+        System.out.println("Enter length of the second edge: ");
+
+        int length2 = input.nextInt();
+
+
+        System.out.println("Enter length of the third edge: ");
+
+        int length3 = input.nextInt();
+
+
+        //calculates the perimeter of the triangle
+        int perimeter = length1 + length2 + length3;
+
+
+        //checks if the sum of every 2 pairs are greater than the remaining edge
+        if ((length1 + length2) > (length3))
+        {
+
+            //if the condition is true, calculate the perimeter
+            System.out.println("The perimeter of the triangle is: " + perimeter);
+
+        }
+        else if ((length1 + length3) > (length2))
+        {
+
+            System.out.println("The perimeter of the triangle is: " + perimeter);
+
+        }
+        else if ((length3 + length2) > (length1))
+        {
+
+            System.out.println("The perimeter of the triangle is: " + perimeter);
+
+        }
+        else
+        {
+
+            //prints invalid if the sum of every 2 pairs are not greater than the remaining edge
+            System.out.println("invalid input");
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+}
