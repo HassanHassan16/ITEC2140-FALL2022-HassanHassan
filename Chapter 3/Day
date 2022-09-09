@@ -1,0 +1,56 @@
+/**Class: Day
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will check if the day is a weekend or a weekday 
+ */
+
+import java.util.Scanner;
+
+public class Day
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates a scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks user for input
+        System.out.println("Enter the day of the week as a number from 1 to 7: ");
+
+        //gets users input
+        int day = input.nextInt();
+
+        //if the day is between 1 and 5, it will be true
+        if ((day >= 1) && (day <= 5))
+        {
+
+            //prints the following
+            System.out.println("It's a weekday");
+
+        }
+        else if ((day >= 6) && (day <= 7))
+        {
+
+            //prints this if the day is between 6 and 7 inclusive
+            System.out.println("It's a weekend");
+
+        }
+        else
+        {
+
+            //prints this if the day is not between 1 and 7
+            System.out.println("Invalid weekday");
+
+        }
+
+
+    }
+
+
+
+
+}
