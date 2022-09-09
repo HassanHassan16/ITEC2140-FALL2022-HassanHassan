@@ -1,0 +1,184 @@
+/**Class: Insurance 
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will compute the cost of car insurance 
+ */
+
+import java.util.Scanner;
+
+public class Insurance
+{
+
+
+    public static void main (String [] args)
+    {
+
+        //creates scanner object
+        Scanner input = new Scanner(System.in);
+
+        //creates a variable to store the base insurance
+        int baseInsurance = 300;
+
+        //creates variable for the extra money paid if under 27
+        int below27 = 100;
+
+        //creates variable to hold the final cost
+        int costOfInsurance;
+
+
+        System.out.println("Enter you age: ");
+
+        //gets input for users age
+        int Age = input.nextInt();
+
+
+        System.out.println("Enter number of accidents: ");
+
+        //gets input
+        int accidents = input.nextInt();
+
+
+        //run this code if user under 27
+        if (Age < 27)
+        {
+
+
+            if (accidents == 0)
+            {
+
+                //calculates the final cost
+                costOfInsurance = baseInsurance + below27;
+
+                //prints the final cost in the console log
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents == 1)
+            {
+
+                //adds 100 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + below27 + 100;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents == 2)
+            {
+
+                //adds 150 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + below27 + 150;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+
+            }
+            else if (accidents == 3)
+            {
+
+                //adds 250 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + below27 + 250;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents >= 4)
+            {
+
+                //adds 1000 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + below27 + 1000;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else
+            {
+
+                //prints "error" if the user gave a negative number for accidents
+                System.out.println("error");
+
+            }
+
+
+
+        }
+
+        if (Age >= 27)
+        {
+
+            if (accidents == 0)
+            {
+
+                costOfInsurance = baseInsurance;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents == 1)
+            {
+
+                //adds 100 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + 100;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents == 2)
+            {
+
+                //adds 150 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + 150;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+
+            }
+            else if (accidents == 3)
+            {
+
+                //adds 250 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + 250;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else if (accidents >= 4)
+            {
+
+                //adds 1000 which is the extra money paid based on number of accidents
+                costOfInsurance = baseInsurance + 1000;
+
+                System.out.println("Cost of Insurance is: " + costOfInsurance);
+
+
+            }
+            else
+            {
+
+                //prints "error" if user gave a negative number for accidents
+                System.out.println("error");
+
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+
+}
