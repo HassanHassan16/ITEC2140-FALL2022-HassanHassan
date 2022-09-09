@@ -1,0 +1,59 @@
+/**Class: OrderInteger
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will order word numbers in alphabetical order 
+ */
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class OrderInteger
+{
+
+    public static void main (String [] args)
+    {
+        
+        //adds a scanner object 
+        Scanner input = new Scanner(System.in);
+
+        //asks user for a word number
+        System.out.println("Enter the first word number: ");
+
+        //gets users input 
+        String num1 = input.nextLine();
+
+        
+        System.out.println("Enter the second word number: ");
+
+        String num2 = input.nextLine();
+
+
+        System.out.println("Enter the third word number: ");
+
+        String num3 = input.nextLine();
+
+
+        System.out.println("Enter the fourth word number: ");
+
+        String num4 = input.nextLine();
+
+
+        //creates an array to store the word numbers given by the user 
+        String[] nameList = {num1, num2, num3, num4};
+
+        //sorts the word numbers in the array alphabetically based on the first letter of the word
+        Arrays.sort(nameList);
+
+        //prints the array that has been sorted 
+        System.out.println(Arrays.toString(nameList));
+
+
+
+    }
+
+
+
+}
