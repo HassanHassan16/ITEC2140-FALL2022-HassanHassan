@@ -1,0 +1,98 @@
+/**Class: BMI 
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 8, 2022
+ *
+ *This class will compute the BMI of the user 
+ */
+
+import java.util.Scanner;
+
+public class BMI
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks for the users weight
+        System.out.println("Enter your weight in pounds: ");
+
+        //gets users input
+        double weight = input.nextDouble();
+
+        //convert pounds to Kilograms
+        weight = weight * 0.4536;
+
+
+        //asks for the users height
+        System.out.println("Enter your height in inches: ");
+
+        double height = input.nextDouble();
+
+        //converts inches to meters
+        height = height * 0.0254;
+
+
+        //calculates BMI
+        double BMI = (weight)/(height * height);
+
+        //prints BMI for the user to see
+        System.out.println(BMI);
+
+        if (BMI < 18.5)
+        {
+
+            //prints this if statement is true
+            System.out.println("You are Underweight");
+
+
+        }
+        if (BMI >= 30.0)
+        {
+
+            System.out.println("You are Obese");
+
+        }
+        if (18.5 <= BMI)
+        {
+
+            //checks if the BMI is within a certain range using these if statements
+            if(BMI < 25.0)
+            {
+
+                System.out.println("You are Normal");
+
+            }
+
+
+        }
+        if (25.0 <= BMI)
+        {
+
+            ////checks if the BMI is within a certain range using these if statements
+            if (BMI < 30.0)
+            {
+
+                System.out.println("You are Overweight");
+
+            }
+
+
+        }
+       
+
+
+
+
+    }
+
+
+
+
+
+
+}
