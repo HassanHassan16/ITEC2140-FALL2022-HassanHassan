@@ -1,0 +1,65 @@
+/**Class: Time
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 10, 2022
+ *
+ *This class will calculate time since midnight and until midnight
+ */
+
+
+public class Time
+{
+
+    public static void main (String [] args)
+    {
+
+
+        //converted 5 p.m to 17
+        int hour = 17;
+
+        //remaining hours of the day
+        int remainingHour = 23 - hour;
+
+        int minute = 15;
+
+        //remaining minutes in an hour
+        int remainingMinute = 59 - minute;
+
+        //the seconds after 5:15 p.m
+        int second = 30;
+
+        //remaining seconds in a minute
+        int remainingSecond = 60 - second;
+
+
+        //calculates time since midnight in seconds
+        int secondsSinceMidnight = (hour * 60 * 60) + (minute * 60) + second;
+
+        //calculates time until midnight in seconds
+        int secondsUntilMidnight = (remainingHour * 60 * 60) + (remainingMinute * 60) + remainingSecond;
+
+
+        //prints the time since midnight in seconds
+        System.out.println("Time since midnight in seconds: " + secondsSinceMidnight);
+
+        //prints the time until midnight in seconds
+        System.out.println("Time until midnight in seconds: " + secondsUntilMidnight);
+
+
+        //variable holds the total amount of seconds in a day
+        double totalTimeInDay = 24.0 * 60 * 60;
+
+        //calculates the percentage of the day that has passed
+        double dayPassed = (secondsSinceMidnight / totalTimeInDay) * 100;
+
+
+        //prints the percentage of the day that has passed
+        System.out.println(dayPassed + "% of the day has passed");
+
+
+    }
+
+
+
+}
