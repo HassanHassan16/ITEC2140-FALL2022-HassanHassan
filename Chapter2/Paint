@@ -1,0 +1,80 @@
+/**Class: Paint   
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 10, 2022
+ *
+ *This class will calculate the amount of paint needed to paint the room 
+ */
+
+import java.util.Scanner;
+
+
+public class Paint
+{
+
+    public static void main (String [] args)
+    {
+        //creates scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks user to enter length of room
+        System.out.println("Enter length of the room: ");
+
+        //gets length from user
+        double length = input.nextDouble();
+
+        //asks user for height
+        System.out.println("Enter height of the room: ");
+
+        //gets height from user
+        double height = input.nextDouble();
+
+        //asks user to enter width of room
+        System.out.println("Enter width of the room: ");
+
+        //gets width from user
+        double width = input.nextDouble();
+
+        //asks user for number of windows in the room
+        System.out.println("Enter number of windows in the room: ");
+
+        //gets number of windows from user
+        int window = input.nextInt();
+
+        //asks user for number of doors in the room
+        System.out.println("Enter number of doors in the room: ");
+
+        //gets number of doors in the room from user
+        int door = input.nextInt();
+
+        //calculates the area of the walls that will be painted
+        double areaOfRoom = (2.0 * length * height) + (2.0 * width * height);
+        
+        
+        //calculates the area of the window
+        window = window * 15;
+
+        //calculates the area of the door
+        door = door * 21;
+
+        //subtracts the area of the door and window from area of the walls
+        double finalArea = areaOfRoom - (window + door);
+
+        //calculate the amount of paint needed in gallons 
+        double gallon = finalArea / 350;
+
+        //convert gallons to quarts 
+        double quart = gallon * 4.0;
+
+        //print gallons needed to paint the room 
+        System.out.println("The amount of paint needed in gallons is: " + (int)gallon);
+
+        //print quarts needed to paint the room 
+        System.out.println("The amount of paint needed in quarts is: " + quart);
+
+
+    }
+
+
+}
