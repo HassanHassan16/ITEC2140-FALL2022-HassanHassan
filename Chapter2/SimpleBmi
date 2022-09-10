@@ -1,0 +1,58 @@
+/**Class: SimpleBmi    
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 10, 2022
+ *
+ *This class will calculate the BMI of the person 
+ */
+
+import java.util.Scanner;
+
+public class SimpleBmi
+{
+
+    public static void main (String [] args)
+    {
+
+        //asks the user to enter weight in pounds
+        System.out.println("Enter weight in pounds: ");
+
+        //creates a scanner object
+        Scanner input = new Scanner(System.in);
+
+        //gets the user's weight
+        double pounds = input.nextDouble();
+
+        //asks for the user's height in feet
+        System.out.println("Enter height in feet: ");
+
+        //gets the user's height
+        int feet = input.nextInt();
+
+        //asks the user for height in inches
+        System.out.println("Enter height in inches: ");
+
+        //gets user's height
+        int inches = input.nextInt();
+
+        //converts pounds to kilograms
+        double kilogram = pounds / 2.2;
+
+        //converts the feet to inches then adds up the user's height
+        inches = inches + (feet * 12);
+
+        //converts inches to meters
+        double meter = inches * 0.0254;
+
+        //calculates the user's BMI
+        double bmi = kilogram / (meter * meter);
+
+        //prints the BMI
+        System.out.println("The BMI is: " + bmi);
+
+
+    }
+
+
+}
