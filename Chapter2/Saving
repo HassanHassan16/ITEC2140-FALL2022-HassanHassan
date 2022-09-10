@@ -1,0 +1,62 @@
+/**Class: Saving    
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 10, 2022
+ *
+ *This class will calculate the monthly saving amount for the first six months 
+ */
+
+import java.util.Scanner;
+
+public class Saving
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates a scanner object
+        Scanner input = new Scanner(System.in);
+
+        //asks user to enter saving amount
+        System.out.println("Enter monthly saving amount: ");
+
+        //gets the saving amount from user
+        double monthlySaving = input.nextDouble();
+
+        //monthly interest rate calculated
+        final double MONTHLY_RATE = 0.05/12;
+
+        //calculates the saving amount for the first 6 months with interest
+        double monthly1Value = monthlySaving * (1 + MONTHLY_RATE);
+
+        double monthly2Value = (monthly1Value + monthlySaving) * (1 + MONTHLY_RATE);
+
+        double monthly3Value = (monthly2Value + monthlySaving) * (1 + MONTHLY_RATE);
+
+        double monthly4Value = (monthly3Value + monthlySaving) * (1 + MONTHLY_RATE);
+
+        double monthly5Value = (monthly4Value + monthlySaving) * (1 + MONTHLY_RATE);
+
+        double monthly6Value = (monthly5Value + monthlySaving) * (1 + MONTHLY_RATE);
+
+        //prints the account value for the first 6 months
+        System.out.printf("Account value after first month is %.2f\n", monthly1Value);
+
+        System.out.printf("Account value after second month is %.2f\n", monthly2Value);
+
+        System.out.printf("Account value after third month is %.2f\n", monthly3Value);
+
+        System.out.printf("Account value after fourth month is %.2f\n", monthly4Value);
+
+        System.out.printf("Account value after fifth month is %.2f\n", monthly5Value);
+
+        System.out.printf("Account value after sixth month is %.2f\n", monthly6Value);
+
+
+
+    }
+
+
+
+}
