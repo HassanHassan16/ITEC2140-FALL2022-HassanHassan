@@ -1,0 +1,29 @@
+/**Class: Fahrenheit
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 10, 2022
+ *
+ *This class will convert 100 Fahrenheit to Celsius 
+ */
+
+public class Fahrenheit
+{
+
+    public static void main (String [] args)
+    {
+
+        //creates a variable to store the temperature in fahrenheit
+        int fahrenheit = 100;
+
+        //creates a variable to convert from fahrenheit to celsius
+        double convertToCelsius = (fahrenheit - 32) * (5.0 / 9);
+
+        //prints the temperature in celsius
+        System.out.println(fahrenheit + " Fahrenheit is " + convertToCelsius + " Celsius");
+
+
+    }
+
+
+}
