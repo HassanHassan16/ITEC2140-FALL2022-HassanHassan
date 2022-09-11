@@ -65,7 +65,7 @@ public class Paint
         double gallon = finalArea / 350;
 
         //convert gallons to quarts 
-        double quart = gallon * 4.0;
+        double quart = gallon * 4.0; //this is to convert a gallon to quarts but this question is about total painting amount into ____ gallon ____ quarts
 
         //print gallons needed to paint the room 
         System.out.println("The amount of paint needed in gallons is: " + (int)gallon);
