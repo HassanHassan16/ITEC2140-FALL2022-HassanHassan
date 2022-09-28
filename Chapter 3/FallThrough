@@ -1,0 +1,110 @@
+/**Class: FallThrough  
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: September 27, 2022
+ *
+ *This class will find out if a letter is a vowel or consonent and many more 
+ */
+
+import java.util.Random;
+
+public class FallThrough
+{
+
+    public static void main(String [] args)
+    {
+
+        //creates a random object
+        Random pick = new Random();
+
+        //creates a string that contains letters and some characters
+        String all = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[,]";
+
+
+        //gets a random character or letter from the string
+        char letter = all.charAt(pick.nextInt(all.length()));
+
+        //Runs the code if the random character is an alphabet letter. Uses ASCI values
+        if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z'))
+        {
+
+
+            switch(letter)
+            {
+
+                //Determines the first 4 letters and then if random character is a vowel
+                case 'a':
+                    System.out.println("" + letter + " is a vowel");
+                    System.out.println("" + letter + " is is in the first four letters");
+                    break;
+                case 'b':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'c':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'd':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'A':
+                    System.out.println("" + letter + " is a vowel");
+                    System.out.println("" + letter + " is is in the first four letters");
+                    break;
+                case 'B':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'C':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'D':
+                    System.out.println("" + letter + " is is in the first four letters");
+                    System.out.println("" + letter + " is a consonant");
+                    break;
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    System.out.println("" + letter + " is a vowel");
+                    break;
+                default:
+                    //if not a vowel or one of the first 4 letters, this will only be printed
+                    System.out.println("" + letter + " is a consonant");
+
+
+
+
+
+
+            }
+
+
+
+
+        }
+        else
+        {
+
+            //this will be printed if the random character is not a letter
+            System.out.println("" + letter + " letter is not an alphabet!");
+
+        }
+
+
+
+
+    }
+
+
+
+}
+
