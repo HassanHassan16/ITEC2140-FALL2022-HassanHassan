@@ -1,0 +1,94 @@
+/**Class: CombineStrings
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will combine user entered strings in different ways depending on the length of said strings 
+ */
+ 
+ import java.util.Scanner; 
+ 
+ public class CombineStrings
+ {
+ 
+ 
+    public static void main(String [] args)
+    {
+
+      //creates scanner object 
+      Scanner input = new Scanner(System.in);
+      
+      //asks the user to enter the 1st sentence 
+      System.out.println("Enter a sentence");
+
+      //gets user input 
+      String sentence1 = input.nextLine(); 
+      
+      //asks the user to enter the 2nd sentence 
+      System.out.println("Enter second sentence");
+
+      //gets user input
+      String sentence2 = input.nextLine(); 
+
+      //compares length of sentence 1 and 2
+      if(sentence1.length() > sentence2.length())
+      {
+
+        //print this if length of sentence 1 is longer than sentence 2
+        System.out.println("String \"" + sentence1 + "\" is longer than String \"" + sentence2 + "\"");
+      
+      
+      }
+      else
+      {
+
+        //print this if length of sentence 2 is longer than sentence 1
+        System.out.println("String \"" + sentence2 + "\" is longer than String \"" + sentence1 + "\"");
+
+      
+      }
+
+      //compares letters in both sentences to one another
+      for(int i = 0; i < sentence1.length(); i++)
+      {
+
+        //compares each letter in both sentences using i 
+        if(sentence1.charAt(i) < sentence2.charAt(i))
+        {
+
+          //print this if sentenec 1 appears before sentence 2
+          System.out.println("String \"" + sentence1 + "\" appears before String \"" + sentence2 + "\" in lexicographic order");
+          break;
+      
+      
+        }
+        else if(sentence2.charAt(i) < sentence1.charAt(i))
+        {
+
+          //print this if sentenec 2 appears before sentence 1
+          System.out.println("String \"" + sentence2 + "\" appears before String \"" + sentence1 + "\" in lexicographic order");
+          break;
+      
+      
+      
+        }
+        
+
+      
+      
+      }
+
+      //combines sentence 1 and 2
+      String combine = sentence1 + " " + sentence2;
+
+      //prints sentence 1 and 2 together 
+      System.out.println("New sentence created is \"" + combine + "\"");
+
+    
+    }
+ 
+
+ 
+ }
+ 
