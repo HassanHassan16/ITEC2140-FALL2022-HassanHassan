@@ -1,0 +1,64 @@
+/**Class: Average
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will calculate the average grade in the class
+ */
+ 
+ import java.util.Scanner; 
+ 
+ public class Average
+ {
+ 
+    public static void main(String [] args)
+    {
+
+      //creates a scanner object 
+      Scanner input = new Scanner(System.in);
+
+      //asks the user to enter grades
+      System.out.println("Enter student grades then enter any letter to get the average");
+
+      //creates variable to store inputted grade
+      int grade = 0;
+
+      //creates a varaible for sum of grades entered
+      double sum = 0.0; 
+
+      //creates a variable to use when calculating the average 
+      int counter = 0; 
+
+      //creates a variable to hold the average of grades 
+      double avg = 0.0;
+      
+      
+      while(input.hasNextInt())
+      {
+
+        //grabs the users input 
+        grade = input.nextInt();
+
+        //adds up the entered grades
+        sum = sum + grade; 
+
+        //variable goes up by 1 every time new grade is entered 
+        counter++; 
+ 
+      
+      }
+
+      //calculates the average of the grades 
+      avg = sum / counter; 
+
+      //prints the average 
+      System.out.println("The average grade is " + avg); 
+    
+ 
+    
+    }
+
+ 
+ 
+ }
