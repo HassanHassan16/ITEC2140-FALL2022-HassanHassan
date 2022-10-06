@@ -1,0 +1,41 @@
+/**Class: Find
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will find the last occurrence of the provided character in the provided String and display the corresponding index.
+ */
+ 
+ import java.util.Scanner; 
+ 
+ public class Find
+ {
+ 
+    public static void main(String [] args) 
+    {
+
+      //creates scanner object
+      Scanner input = new Scanner(System.in);
+
+      //asks user to enter a sentence 
+      System.out.println("Enter the sentence");
+
+      //gets users input 
+      String sentence = input.nextLine();
+      
+      //asks user to enter a letter or a character 
+      System.out.println("Enter the character or letter you want to check the last occurance of");
+
+      //gets user input 
+      String character = input.next(); 
+      
+      //prints out the results of the index 
+      System.out.println("Last occurrence of character \'" + character + "\' in \"" + sentence + "\"  is at index " + sentence.lastIndexOf(character));
+      
+
+    
+    }
+ 
+
+ }
