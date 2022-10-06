@@ -1,0 +1,32 @@
+/**Class: Pattern1
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will creates a pattern.
+ */
+ 
+ public class Pattern1
+ {
+ 
+ 
+    public static void main(String [] args)
+    {
+    
+      //creates a variable string for the patterns
+      String pattern = "******";
+      
+      //uses length of the created string to run the loop
+      for(int i = pattern.length(); i >= 0; i--)
+      {
+
+        //print the pattern 
+        System.out.println(pattern.substring(0,i));
+
+      }
+
+    }
+
+ 
+ }
