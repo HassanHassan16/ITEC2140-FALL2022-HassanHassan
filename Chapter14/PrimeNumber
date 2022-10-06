@@ -1,0 +1,72 @@
+/**Class: PrimeNumber
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will tell the user if the number given by them is a prime number or not
+ */
+ 
+ import java.util.Scanner; 
+ 
+ public class PrimeNumber
+ {
+ 
+    public static void main(String [] args)
+    {
+
+      //create scanner object
+      Scanner input = new Scanner(System.in);
+
+      //ask the user for an integer
+      System.out.println("Enter a positive integer"); 
+
+      //create boolean variable and set its defeault to true
+      boolean result = true; 
+
+      //grabs users input 
+      int number = input.nextInt();
+
+      //the number must be bigger than 2 to start the loop
+      if(number > 2)
+      {
+
+        //use for loop to see if the number given can be divided by a number other than itself 
+        for(int i = 2; i < number; i++)
+        {
+
+        //if number can be divided run this code 
+        if(number % i == 0)
+        {
+
+          //boolean variable set to false if number is not a prime number 
+          result = false; 
+
+          //tells the user the number is not a prime number 
+          System.out.println(number + " is not a prime number");
+
+          //ends the program
+          System.exit(0);
+        
+        }
+       
+      
+        }
+
+        
+      }
+
+      //if the number is prime, starts this code 
+      if(result = true)
+      {
+
+        System.out.println(number + " is a prime number");
+        
+      }
+    
+
+    
+    }
+ 
+ 
+ }
