@@ -1,0 +1,58 @@
+/**Class: Fibonacci
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will prints the first 30 values in the Fibonacci series.
+ */
+ 
+ public class Fibonacci
+ {
+ 
+ 
+   public static void main(String [] args)
+   {
+
+    //creates variable sum which is the total 
+    int sum = 0;
+
+    //creates variab;e to help store numbers
+    int holder = 1;
+
+    //creates variable to help store numbers
+    int extra = 0; 
+
+    //prints the first digit in the series
+    System.out.print(sum + ",");
+
+    //prints the second digit in the series
+    System.out.print(holder + ",");
+    
+    
+    for(int i = 2; i < 30; i++)
+    {
+
+      //adds previous two digits in the series
+      sum = holder + extra; 
+
+      //variable is reassigned a value to compute the for the next number in the series
+      extra = holder;
+
+      //variable is reassigned a value to compute the for the next number in the series
+      holder = sum; 
+
+      //prints the lastest number in the series 
+      System.out.print(sum + ",");
+      
+      
+ 
+    
+    
+    } 
+   
+  
+   
+   }
+ 
+ }
