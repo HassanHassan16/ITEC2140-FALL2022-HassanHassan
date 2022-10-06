@@ -1,0 +1,59 @@
+/**Class: SumInteger
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will accepts an integer from the user and display the sum of the digits of the provided integer.
+ */
+ 
+ import java.util.Scanner;
+ 
+ 
+ public class SumInteger
+ {
+ 
+    public static void main(String [] args)
+   {
+
+     //creates scanner object 
+     Scanner input = new Scanner(System.in);
+
+     //asks the user to enter a positive integer
+      System.out.println("Enter a positive integer value");
+
+      //creates variable to store the sum
+      int total = 0;
+
+      //grabs users input 
+      int number = input.nextInt(); 
+
+      //creates a variable to hold the user's input for later use
+      int holder = number; 
+      
+      
+      //makes sure the entered number is positive 
+      while(number > 0)
+      {
+        //uses module to grab the remainder and then adds it to the total 
+        total = total + (number % 10);
+
+        //divides the number by 10 to shrink the entered number to get a new remainder when using module
+        number = number / 10; 
+      
+      
+      
+      }
+
+      //prints the sum of the digits 
+      System.out.println("The sum of digits of " + holder + " is " + total);
+      
+
+
+     
+   }
+    
+    
+ 
+ 
+ }
