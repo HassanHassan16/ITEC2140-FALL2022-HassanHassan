@@ -1,0 +1,55 @@
+/**Class: Reverse
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will accept a String value from the user and display the reverse of that value.
+ */
+ 
+ import java.util.Scanner;
+ 
+ public class Reverse
+ {
+ 
+  
+    public static void main(String [] args)
+    {
+
+      //creates a scanner object
+      Scanner input = new Scanner(System.in); 
+
+      //asks the user to enter a sentence 
+      System.out.println("Enter a sentence");
+
+      //gets user input 
+      String sentence = input.nextLine(); 
+
+      //creates variable that will hold the reversed sentence 
+      String sum = ""; 
+
+      //creates variable that will hold the entered sentence 
+      String holder = sentence;
+      
+
+      //Will start from the end of the string and all the way to the first index 
+      for(int i = sentence.length() - 1; i >= 0; i--)
+      {
+
+        //adds characters in the string using the i 
+        sum = sum + sentence.charAt(i);
+
+   
+      }
+
+      //prints the sentene in reverse 
+      System.out.println("Reverse of \"" + holder + "\" is \"" + sum + "\""); 
+
+    
+    
+    }
+ 
+
+ 
+ }
+ 
