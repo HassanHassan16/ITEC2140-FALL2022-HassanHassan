@@ -1,0 +1,78 @@
+/**Class: MaxMin
+ *author: Hassan Hassan
+ *version: 1.0
+ *course: 2140 ITEC Fall 2022
+ *written: October 5, 2022
+ *
+ *This class will prompt the user for student grades and display the highest and lowest grades in the class
+ */
+
+
+import java.util.Scanner;
+
+
+public class MaxMin
+  {
+
+
+    public static void main(String [] args)
+    {
+
+      //creates a variable to hold the highest grade
+      int max = 0; 
+
+      //creates scanner object
+      Scanner input = new Scanner(System.in);
+      
+
+      //asks the user to enter a value 
+      System.out.println("Enter the values");
+
+      //creates a variable to hold the entered grade
+      int holder = input.nextInt();
+
+      //creates a variable to hold the lowest grade
+      int min = holder;
+
+      
+
+      while(input.hasNextInt())
+        {
+
+          //grabs the users input
+          holder = input.nextInt();
+          
+
+          //if entered grade is higher than the highest grade then excute this code
+          if(holder > max)
+          {
+
+
+            //sets the new highest grade 
+            max = holder; 
+       
+          }
+
+          //if entered grade is lower than the lowest grade then excute this code
+          if(holder < min)
+          {
+
+            //sets the new lowest grade 
+            min = holder;
+              
+          }
+
+          
+        }
+      
+
+      //prints the highest grade 
+      System.out.println("the maximum is " + max);
+
+      //prints the lowest grade 
+      System.out.println("the minimum is " + min);
+      
+
+    }
+
+  }
